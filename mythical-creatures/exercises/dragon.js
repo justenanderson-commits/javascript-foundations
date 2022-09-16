@@ -10,12 +10,9 @@ class Dragon {
     }
     eat() {
         this.needsToEat++;
-        console.log('Hungry before: ', this.hungry)
         this.needsToEat < 3 ? this.hungry = true : this.hungry =  false
-        console.log('Hungry after: ', this.hungry)
-        console.log('Needs to eat value: ', this.needsToEat)
         }
-        
+
     }
 
 

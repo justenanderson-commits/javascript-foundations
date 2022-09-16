@@ -1,0 +1,40 @@
+// class Magician {
+//   constructor({name: newName, assistant: hasAssistant, clothing: clothes}) {
+//     this.name = `The Great ${newName}`;
+//     this.assistant = hasAssistant;
+//     this.favoriteAccessory = clothes || 'top hat';
+//     this.confidencePercentage = 10
+//   } 
+  
+  class Magician {
+    constructor(newName) {
+      this.name = `The Great ${newName.name}`;
+      this.assistant = newName.hasAssistant;
+      this.favoriteAccessory = newName.clothes || 'top hat';
+      this.confidencePercentage = newName.confidencePercentage || 0
+    } 
+
+  performIncantation(words) {
+    return words.toUpperCase() + '!';
+  }
+
+  performTrick() {
+    this.confidencePercentage += 10;
+    if (this.favoriteAccessory === 'top hat') {
+    return 'PULL RABBIT FROM TOP HAT';
+  } else {
+    return 'PULL DOVE FROM SLEEVE';
+    }
+  }
+
+  performShowStopper() {
+    if (this.confidencePercentage >= 100 && this.assistant === true) {
+      return 'WOW! The magician totally just sawed that person in half!';
+      } else { 
+        
+        return 'Oh no, this trick is not ready!';
+    }
+  }
+}
+
+module.exports = Magician;
